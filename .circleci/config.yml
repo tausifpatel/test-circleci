@@ -36,7 +36,25 @@
 #       # - node/test
 
 
-#############
+# version: 2.1
+
+# orbs: 
+#   node: circleci/node@4.5.1
+
+# jobs: 
+#   build-and-test:
+#     docker:
+#       - image: cimg/node:15.1
+#     steps:
+#       - checkout 
+#       - node/install-packages
+#       - run: npm test 
+
+# workflow:
+#   sample-work-flow:
+#     jobs:
+#       - build-and-test 
+
 
 version: 2.1
 
@@ -54,8 +72,6 @@ jobs:
       - run: npm test
 
 workflows:
-  sample: 
+  sample-work-flow: 
     jobs:
       - build-and-test
-
-
